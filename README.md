@@ -6,8 +6,9 @@ Terraform and Ansible, GitOps with ArgoCD, and the observability stack that
 tells us when something is wrong before a customer does. Lately also the
 infrastructure for ML and LLM workloads.
 
-- 🔭 Working on: an [SRE assistant](https://github.com/swaroop002/infra-agent) that answers on-call questions from live telemetry, with evidence
-- 🌱 Learning: Go, by [building the tools](https://github.com/swaroop002/go-for-devops) I kept wishing I had
+- 🔭 Working on: [pulse](https://github.com/swaroop002/pulse), a telemetry platform with its own storage engine, and [berth](https://github.com/swaroop002/berth), the control plane that provisions environments (and pulse tenants) for teams
+- 🛠️ Also: an [SRE assistant](https://github.com/swaroop002/infra-agent) that answers on-call questions from live telemetry, with evidence
+- 🌱 Learned Go by [building the tools](https://github.com/swaroop002/go-for-devops) I kept wishing I had
 - ☁️ AWS Certified Solutions Architect – Associate
 - 📫 [swar.rang212@gmail.com](mailto:swar.rang212@gmail.com) · [LinkedIn](https://www.linkedin.com/in/swaroop-rangle/) · [Portfolio](https://swaroop-portfolio-ten.vercel.app/)
 
@@ -39,6 +40,8 @@ infrastructure for ML and LLM workloads.
 
 | Project | What it is |
 |---|---|
+| [**pulse**](https://github.com/swaroop002/pulse) | Multi-tenant telemetry platform, written from the storage engine up: group-committed write-ahead log, sharded in-memory head, immutable Gorilla-compressed blocks with compaction and cold tiering, admission control (429, not timeouts), and a Prometheus-compatible query API so Grafana reads it with no plugin. **153k samples/s with fsync on every write**; crash test recovers every acknowledged sample. ADRs for each decision, fuzzed formats, `go test -race` throughout. |
+| [**berth**](https://github.com/swaroop002/berth) | Environment control plane: declare an environment (size, disk, hostname, authenticated route, telemetry tenant, TTL) and a reconciler makes it exist, repairs drift, tears it down in order and expires it. Team-scoped tokens, an in-process route gateway that authenticates and proxies, cost per environment and team, Prometheus metrics. Kubernetes-shaped objects, so the same type can become a CRD. Generalises the provisioning platform I ran at work. |
 | [**infra-agent**](https://github.com/swaroop002/infra-agent) | Read-only SRE assistant: ask in plain English (web UI or Microsoft Teams), get answers from Prometheus, Loki, Grafana alerting, OnCall and AWS/Azure/GCP inventories, with the exact queries shown. LangGraph + FastAPI, demo mode, 87 offline tests. |
 | [**go-for-devops**](https://github.com/swaroop002/go-for-devops) | How I learned Go: 20 lessons, 14 advanced phases and 9 working projects — log analyser, service monitor, node exporter, durable job queue, reverse proxy, Kubernetes operator, container runtime, Terraform-like deploy tool, Raft key-value store. All build and pass tests. |
 | [**mnist-mlflow-serving**](https://github.com/swaroop002/mnist-mlflow-serving) | A small end-to-end MLOps loop: CNN trained and autologged to MLflow, served from the model registry behind a Flask API, tested by drawing digits in the browser. |
