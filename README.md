@@ -1,47 +1,63 @@
-# Hi there, I'm Swaroop! 👋
-## About Me
-I am an M.Sc. Computer Science graduate with a robust academic background from Mithibai College, University of Mumbai. My passion lies in exploring cutting-edge domains such as Cloud Computing, Data Analytics, Data Science, Data Engineering, Machine Learning, Software Engineering, and Web Development.
+# Hi, I'm Swaroop Rangle 👋
 
-## Academic Background
-Degree: M.Sc. Computer Science.<br/>
-Institution: Mithibai College, University of Mumbai
+**DevOps Engineer at [Faclon Labs](https://faclon.com), Mumbai** — I run the cloud
+infrastructure behind an industrial IoT platform: Kubernetes on AWS and Azure,
+Terraform and Ansible, GitOps with ArgoCD, and the observability stack that
+tells us when something is wrong before a customer does. Lately also the
+infrastructure for ML and LLM workloads.
 
-## 🔧 Skills & Interests
-I bring to the table a solid foundation in computer science principles and a keen interest in leveraging emerging technologies to drive innovative solutions.<br/> My key skills and interests include:
-<ul><li>Cloud Computing</li>
-<li>Data Science</li>
-<li>Data Engineering</li>
-<li>Machine Learning</li>
-<li>Software Engineering</li>
-<li>Web Development</li>
-</ul>
+- 🔭 Working on: an [SRE assistant](https://github.com/swaroop002/infra-agent) that answers on-call questions from live telemetry, with evidence
+- 🌱 Learning: Go, by [building the tools](https://github.com/swaroop002/go-for-devops) I kept wishing I had
+- ☁️ AWS Certified Solutions Architect – Associate
+- 📫 [swar.rang212@gmail.com](mailto:swar.rang212@gmail.com) · [LinkedIn](https://www.linkedin.com/in/swaroop-rangle/) · [Portfolio](https://swaroop-portfolio-ten.vercel.app/)
 
-## 🚀 Technical Proficiency
-I am technically proficient and eager to contribute my expertise in the following areas:
-<ul><li>Cloud Platforms</li>
-<li>Data Analysis / Machine Learning</li>
-<li>Software / Web Development</li></ul>
+## What I've done in production
 
-## Github Stats
-[![GitHub Streak](http://github-readme-streak-stats.herokuapp.com?user=swaroop002&theme=dark&background=000000)](https://git.io/streak-stats)
+- **Cut AWS compute cost by ~40% (~$3k/month)** by migrating EC2 workloads from x86 to Graviton (ARM).
+- **Event-driven autoscaling** with KEDA and the Cluster Autoscaler: 6 → 48 pods across 8 nodes, absorbing 10–40k-message bursts on RabbitMQ.
+- **Deployments from 25–30 minutes to 5–10** with CI/CD pipelines (GitHub Actions, Jenkins, GitLab CI) and SonarQube/Snyk gates.
+- **One observability stack for 40+ VMs and 2 Kubernetes clusters** — Prometheus, Grafana, Loki, Grafana Alloy — plus on-call, incident response and postmortems.
+- **Self-service dev environments** for 60–70 engineers; **20+ operational workflows** automated in Python; **20+ Python microservices** in production.
+- **70% faster queries** after migrating to Aurora PostgreSQL.
+- **ML/LLM infrastructure**: MLflow, Airflow/Dagster pipelines, GPU model serving with Triton, LangGraph + RAG (Qdrant, Langfuse), internal MCP servers, self-hosted LLMs with Ollama.
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=swaroop002&layout=compact&theme=vision-friendly-dark)
+## Toolbox
 
-## Open Source Contribution
+| | |
+|---|---|
+| **Cloud** | AWS (EKS, EC2/Graviton, S3, IAM, VPC, Route 53, CloudFront, ELB, Aurora, CloudWatch), Azure (AKS, VMSS, Entra ID, Blob), GCP (fundamentals) |
+| **Containers & orchestration** | Kubernetes, Helm, ArgoCD, KEDA, Karpenter, Docker |
+| **Infrastructure as code** | Terraform, Ansible |
+| **CI/CD & DevSecOps** | GitHub Actions, Jenkins, GitLab CI, SonarQube, Snyk |
+| **Observability** | Prometheus, Grafana, Loki, Grafana Alloy |
+| **Languages** | Python, Bash, SQL, Go |
+| **Data, ML & LLM infra** | MLflow, Airflow, Dagster, Triton, LangGraph, Qdrant, Langfuse, MCP, Ollama |
+| **Networking & Linux** | Nginx, HAProxy, Cloudflare, Pritunl/OpenVPN, DNS/TLS, Linux |
+| **Messaging & databases** | RabbitMQ, MQTT, PostgreSQL, MongoDB, Redis, MySQL |
 
-[![@swarop02's Holopin board](https://holopin.me/swarop02)](https://holopin.io/@swarop02)
-## Career Objective
-I am actively seeking opportunities to contribute to a dynamic and forward-thinking organization. My goal is to apply my knowledge and skills in cloud platforms, data analysis, and machine learning to address challenges and drive impactful solutions.
+## Featured projects
 
-## 📬 Contact Information
-Feel free to reach out to me for collaborations, discussions, or any inquiries. I am open to networking and exploring new opportunities.<br/>
-Email: swar.rang212@gmail.com<br/>
-LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/swaroop-rangle/)
+| Project | What it is |
+|---|---|
+| [**infra-agent**](https://github.com/swaroop002/infra-agent) | Read-only SRE assistant: ask in plain English (web UI or Microsoft Teams), get answers from Prometheus, Loki, Grafana alerting, OnCall and AWS/Azure/GCP inventories, with the exact queries shown. LangGraph + FastAPI, demo mode, 87 offline tests. |
+| [**go-for-devops**](https://github.com/swaroop002/go-for-devops) | How I learned Go: 20 lessons, 14 advanced phases and 9 working projects — log analyser, service monitor, node exporter, durable job queue, reverse proxy, Kubernetes operator, container runtime, Terraform-like deploy tool, Raft key-value store. All build and pass tests. |
+| [**mnist-mlflow-serving**](https://github.com/swaroop002/mnist-mlflow-serving) | A small end-to-end MLOps loop: CNN trained and autologged to MLflow, served from the model registry behind a Flask API, tested by drawing digits in the browser. |
+| [Real-time-Order-Processing-on-AWS](https://github.com/swaroop002/Real-time-Order-Processing-on-AWS) | Streaming order pipeline on Kinesis, Lambda, DynamoDB and S3. |
+| [Visualizing-Real-time-Server-Logs](https://github.com/swaroop002/Visualizing-Real-time-Server-Logs) | Live server-log dashboards with Kinesis, Lambda and OpenSearch. |
+| [Product-Recommender-On-EMR](https://github.com/swaroop002/Product-Recommender-On-EMR) | Recommendation job on Amazon EMR fed by Kinesis Firehose and S3. |
 
-## 🛠️ Projects
-Explore my repositories to find projects related to my areas of interest and expertise. I look forward to sharing and collaborating on exciting projects within the GitHub community.
+I also run a private, local-only job-search assistant that scores postings and
+tailors resumes against a fact-checked profile — not published, because it holds
+my own data.
 
-## Connect with Me
-I am always open to connecting with like-minded individuals, professionals, and enthusiasts. Feel free to follow me on GitHub, connect on LinkedIn, or drop me an email.
+## Background
 
-Let's build something amazing together! 🚀
+- **M.Sc. Computer Science**, Mithibai College, University of Mumbai (2022–2024) — CGPA 8.35
+- **B.Sc. Computer Science**, Bhavans College, University of Mumbai (2019–2022) — CGPA 9.62
+- Before Faclon: DevOps Engineer intern at Viamagus (2024), Data Engineer intern at Mactores (2023–24)
+- **AWS Certified Solutions Architect – Associate** · #30DaysOnGoogleCloud
+
+<p>
+  <img src="https://github-readme-stats.vercel.app/api?username=swaroop002&show_icons=true&theme=default&hide_border=true&rank_icon=github" alt="GitHub stats" height="160">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=swaroop002&layout=compact&hide_border=true&langs_count=8" alt="Top languages" height="160">
+</p>
