@@ -46,6 +46,21 @@ infrastructure for ML and LLM workloads.
 | [Visualizing-Real-time-Server-Logs](https://github.com/swaroop002/Visualizing-Real-time-Server-Logs) | Live server-log dashboards with Kinesis, Lambda and OpenSearch. |
 | [Product-Recommender-On-EMR](https://github.com/swaroop002/Product-Recommender-On-EMR) | Recommendation job on Amazon EMR fed by Kinesis Firehose and S3. |
 
+## Work at Faclon Labs — architecture write-ups
+
+The code is my employer's, so these repos hold the design, the system diagram and the outcomes of each project, not the implementation.
+
+| Write-up | In one line |
+|---|---|
+| [event-driven-infra-provisioning-platform](https://github.com/swaroop002/event-driven-infra-provisioning-platform) | Self-service AWS environments for 60–70 engineers through a Python API and RabbitMQ-driven workers |
+| [event-driven-k8s-autoscaling](https://github.com/swaroop002/event-driven-k8s-autoscaling) | KEDA on RabbitMQ queue depth: 6 → 48 pods, 10K–40K-message bursts |
+| [gitops-deployment-platform](https://github.com/swaroop002/gitops-deployment-platform) | Helm + ArgoCD: auditable releases, one-command rollbacks |
+| [secure-multiarch-cicd](https://github.com/swaroop002/secure-multiarch-cicd) | Jenkins with SonarQube/Snyk gates and native ARM + x86 builds; 25–30 → 5–10 min |
+| [dev-datascience-environment-automation](https://github.com/swaroop002/dev-datascience-environment-automation) | Ansible-provisioned MLflow/Airflow/JupyterLab/VS Code Server environments in minutes |
+| [centralized-monitoring-logging](https://github.com/swaroop002/centralized-monitoring-logging) | Prometheus, Grafana and Loki across 40+ VMs and 2 clusters |
+| [aws-graviton-migration](https://github.com/swaroop002/aws-graviton-migration) | x86 → Graviton with multi-arch images; ~40% / ~$3K per month saved |
+| [secure-service-exposure-network-access](https://github.com/swaroop002/secure-service-exposure-network-access) | Nginx/HAProxy front door on 443, Pritunl/OpenVPN, IAM and network controls |
+
 I also run a private, local-only job-search assistant that scores postings and
 tailors resumes against a fact-checked profile — not published, because it holds
 my own data.
